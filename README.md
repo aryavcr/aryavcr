@@ -2,7 +2,7 @@
 
 - I am developer familiar with React, GSAP, Tailwind, vanilla JS, various CSS properties & currently building functional apps that actually solve a problem.
 - Projects that I am currently working on :
-  - AssetAxis: A Comprehensive Yield Aggregator with both Centralized & Decentralized yield maximizing options. (<a href="https://github.com/aryavcr/AssetAxis">Repo</a>)
+  - AssetAxis: A Comprehensive Yield Aggregator. (<a href="https://github.com/aryavcr/AssetAxis">Repo</a>)
   - OdysseyAI : A platform to imagine your expeditions with AI. (<a href="https://github.com/aryavcr/OdysseyAI">Repo</a>)
 
 
