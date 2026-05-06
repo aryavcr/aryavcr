@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -39,6 +39,8 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
+  /*radius scale*/
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -46,6 +48,15 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /*custom changes over shadcn preset */
+  --radius-card: var(--radius-card);
+  --radius-inner: var(--radius-inner);
+  --shadow-card: var(--shadow-card);
+  --shadow-floating: var(--shadow-floating);
+  --color-blue-accent: var(--blue-accent);
+  --color-blue-accent-hover: var(--blue-accent-hover);
+  --color-updates-dot: var(--updates-dot);
 }
 
 :root {
@@ -81,6 +92,15 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+
+  /*custom changes over shadcn preset */
+  --radius-card: 1rem;           /* bento panel corners */
+  --radius-inner: 0.625rem;      /* for elements inside cards */
+  --shadow-card: 0 1px 4px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.05);
+  --shadow-floating: 0 24px 64px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
+  --blue-accent: oklch(0.623 0.214 259.815);        /* for links, active tabs */
+  --blue-accent-hover: oklch(0.546 0.229 262.881);  /* for hover state */
+  --updates-dot: oklch(0.723 0.219 142.495);         /* pulse dot */
 }
 
 .dark {
@@ -123,6 +143,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
   }
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;
