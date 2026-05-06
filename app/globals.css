@@ -94,7 +94,7 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 
   /*custom changes over shadcn preset */
-  --radius-card: 1rem;           /* bento panel corners */
+  --radius-card: 0.8rem;           /* bento panel corners */
   --radius-inner: 0.625rem;      /* for elements inside cards */
   --shadow-card: 0 1px 4px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.05);
   --shadow-floating: 0 24px 64px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
