@@ -1,5 +1,3 @@
-import Gravity, { MatterBody } from "../ui/gravity/gravity";
-
 export default function FunCard() {
     return (
         <div
