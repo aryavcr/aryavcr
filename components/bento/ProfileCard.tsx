@@ -40,18 +40,23 @@ function EmailIcon() {
 // social links
 const socialLinks = [
     { label: "LinkedIn", href: "#", Icon: LinkedInIcon },
-    { label: "X", href: "#", Icon: XIcon },
-    { label: "GitHub", href: "#", Icon: GitHubIcon },
-    { label: "Email", href: "#", Icon: EmailIcon },
+    { label: "X", href: "https://x.com/aryavcr", Icon: XIcon },
+    { label: "GitHub", href: "https://github.com/aryavcr", Icon: GitHubIcon },
+    { label: "Email", href: "mailto:aryavcr@gmail.com", Icon: EmailIcon },
 ]
 
 
 export default function ProfileCard() {
     return (
+
         <div
-            className="bg-card rounded-card flex flex-col gap-5 p-5"
+            className="bg-card relative rounded-card flex flex-col gap-5 p-5"
             style={{ boxShadow: "var(--shadow-card)" }} >
-            {/* Avatar + Name */}
+{/* background video */}
+            <video loop autoPlay muted className="absolute inset-0 overflow-hidden w-full h-full object-cover rounded-card opacity-40 ">
+                <source src="/videos/tiny.mp4" type="video/mp4" />
+            </video>
+            {/*header */}
             <div className="flex items-center gap-3">
                 <Avatar className="h-12 w-12 ring-2 ring-border hover:ring-foreground transition-all duration-150 cursor-pointer hover:scale-105">
                     <AvatarImage src="https://pbs.twimg.com/profile_images/1808914099700649985/7W136SEj_400x400.jpg" alt="Aryav Chaturvedi" />
@@ -61,9 +66,9 @@ export default function ProfileCard() {
                 </Avatar>
                 <div>
                     <Letter3DSwap
-                        mainClassName="bg-background tracking-tight font-medium"
-                        frontFaceClassName={`bg-background text-foreground`}
-                        secondFaceClassName={`bg-background text-foreground`}
+                        mainClassName=" tracking-tight font-medium"
+                        frontFaceClassName={`text-foreground`}
+                        secondFaceClassName={`text-foreground`}
                         rotateDirection="top"
                         staggerDuration={0.01}
                         staggerFrom="first"
@@ -75,16 +80,16 @@ export default function ProfileCard() {
             </div>
 
 
-            {/* Bio */}
-            <p className="text-muted-foreground text-sm weight-medium">
+            {/* bio */}
+            <p className="text-gray-600 text-sm weight-medium">
                 <ScrambleIn
-                    text="Full-stack developer and builder with a focus on AI tools and developer experience. I like shipping things that are fast, useful, and a little bit ambitious."
+                    text="Fullstack dev and builder with a focus on AI tools and developer experience. I love building things that are fast, useful, and a little bit ambitious."
                     scrambleSpeed={15}
                     scrambledLetterCount={5}
                     autoStart={true}
                 />
             </p>
-            {/* Social Icons */}
+            {/*footer */}
             <div className="flex items-center gap-1 mt-auto">
                 {socialLinks.map(({ label, href, Icon }) => (
                     <a
