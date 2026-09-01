@@ -21,7 +21,13 @@ function ThemeToggle({ className }: { className?: string }) {
     <Button
       variant="ghost"
       size="icon-lg"
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={
+        mounted
+          ? isDark
+            ? "Switch to light mode"
+            : "Switch to dark mode"
+          : "Toggle theme"
+      }
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className={cn("rounded-full", className)}
     >
