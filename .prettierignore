@@ -5,3 +5,5 @@ node_modules/
 coverage/
 pnpm-lock.yaml
 .pnpm-store/
+# vendored oxlint plugin - reformatting it would diverge from upstream
+tools/oxlint/anti-slop
